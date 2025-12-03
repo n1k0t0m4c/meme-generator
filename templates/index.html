@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Generator (Docker)</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; background-color: #f0f0f0; }
+        .container { background: white; padding: 20px; border-radius: 10px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        input, button { margin: 10px 0; padding: 10px; width: 100%; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; font-weight: bold; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meme Generator 3000</h1>
+        <p>Ustvarjeno z Dockerjem 🐳</p>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label>Naloži sliko:</label>
+            <input type="file" name="image" accept="image/*" required>
+            
+            <label>Zgornji tekst:</label>
+            <input type="text" name="top_text" placeholder="Npr. KO POGANJAŠ DOCKER">
+            
+            <label>Spodnji tekst:</label>
+            <input type="text" name="bottom_text" placeholder="Npr. IN DELUJE V PRVO">
+            
+            <button type="submit">Generiraj Meme!</button>
+        </form>
+    </div>
+</body>
+</html>
